@@ -1,0 +1,18 @@
+SergDubrovski
+Serg19900815
+sovelectron@rambler.com
+
+github.com
+create new repository
+code + clon (copy HTTPS)
+Terminal:
+git init
+git clone (copy HTTPS) - скачивание проекта
+git status  
+git add (файл) - подготовка к закачиванию файла
+git add -A  - подготовка к закачиванию всех изменений
+git commit -m "(комментарий)"
+git push - запись файла в репозиторий
+git pull - закачка из репозитория
+
+git
