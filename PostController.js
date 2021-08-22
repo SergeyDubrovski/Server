@@ -1,10 +1,10 @@
-import Post from './Post.js';
 import PostServise from './PostServise.js';
 
 class PostController {
     async create(req, res) {
         try {
-            const post = await PostServise.create(req.body)
+            const post = await PostServise.create(req.body);
+            
             res.status(200).json(post);
         } catch (error) {
             res.status(500).json(error)
