@@ -1,26 +1,19 @@
 import Post from "./Post.js";
 class PostServise {
     async create(post) {
-
         const createdPost = await Post.create(post);
         return createdPost;
     }
 
     async getAll() {
-
         const getPost = await Post.find();
-
         return getPost;
-
-
     }
-
     async getOne(name) {
 
         if (!name) {
             throw new Error('name не найден');
         }
-
         const getName = await Post.find(name);
         return getName;
 
@@ -34,7 +27,6 @@ class PostServise {
         }
     }
     async delete(id) {
-
         if (!id) {
             throw new Error('name не найден');
         } else {

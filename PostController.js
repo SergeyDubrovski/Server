@@ -4,7 +4,6 @@ class PostController {
     async create(req, res) {
         try {
             const post = await PostServise.create(req.body);
-            
             res.status(200).json(post);
         } catch (error) {
             res.status(500).json(error)
@@ -19,27 +18,22 @@ class PostController {
         }
 
     }
-
     async getOne(req, res) {
         try {
             const post = await PostServise.getOne(req.params);
-
             res.status(200).json(post);
         } catch (error) {
             res.status(500).json(error)
         }
     }
-
     async update(req, res) {
         try {
-
             const updatePost = await PostServise.update(req.body);
             res.status(200).json(updatePost);
         }
         catch (error) {
             res.status(500).json(error)
         }
-
     }
     async delete(req, res) {
         try {
@@ -50,9 +44,7 @@ class PostController {
         } catch (error) {
             res.status(500).json(error)
         }
-
     }
-
 }
 
 export default new PostController();
