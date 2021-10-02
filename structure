@@ -23,7 +23,7 @@ mongoose.conect(url,....)
 Post.js схема создания DB экспорт в PostServise.js
 
 создается класс PostServise с методами create, getAll, getOne, update, delete
-на основе Post.find и т.д. 
+на основе Post.find и т.д.  
 
 PostServise экспортируется в класс PostController где на основе его методов запускается обработка запросов
 и ответов различных методов CURD

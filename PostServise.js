@@ -10,17 +10,17 @@ class PostServise {
         return getPost;
     }
     async getOne(name) {
-
-        if (!name) {
+        const getName = await Post.find(name);
+        if (getName.length == 0) {
             throw new Error('name не найден');
         }
-        const getName = await Post.find(name);
-        return getName;
+        else
+            return getName;
 
     }
     async update(post) {
         if (!post._id) {
-            throw new Error('name не найден');
+            throw new Error('id не найден');
         } else {
             const updatePost = await Post.findByIdAndUpdate(post._id, post, { new: true });
             return updatePost;
